@@ -1,3 +1,4 @@
+import re
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -6,3 +7,7 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("Hello, world. You're at the hash_neco index.")
+
+
+def index_feb(request):
+    return HttpResponse("this is february challenge:)")
