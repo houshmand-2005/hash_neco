@@ -1,6 +1,5 @@
-import re
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 # Create your views here.
 
 
@@ -12,13 +11,36 @@ from django.http import HttpResponse, HttpResponseNotFound
 #     return HttpResponse("this is february challenge:)")  # 005
 
 # 006
+
+month_challenge = {
+    "january": "this is january challenge:)",
+    "february": "this is february challenge:)",
+    "march": "this is march challenge:)",
+}
+
+
 def month_index(request, month):
-    if month == "january":
-        challenge_text = "this is january challenge:)"
-    elif month == "february":
-        challenge_text = "this is february challenge:)"
-    elif month == "march":
-        challenge_text = "this is march challenge:)"
-    else:
+    # if month == "january":
+    #     challenge_text = "this is january challenge:)"
+    # elif month == "february":
+    #     challenge_text = "this is february challenge:)"
+    # elif month == "march":
+    #     challenge_text = "this is march challenge:)"
+    # else:
+    #     return HttpResponseNotFound("<h1>404</h1>")
+    # return HttpResponse(challenge_text)
+    #  008
+    try:
+        challenge_text = month_challenge[month]
+        return HttpResponse(challenge_text)
+    except:
         return HttpResponseNotFound("<h1>404</h1>")
-    return HttpResponse(challenge_text)
+# 007 and 008
+
+
+def month_index_bynumber(request, month):
+    months = list(month_challenge.keys())
+    if month > len(months):
+        return HttpResponseNotFound("<h1>404</h1>")
+    forward_month = months[month - 1]
+    return HttpResponseRedirect(f"/challenges/{forward_month}")
