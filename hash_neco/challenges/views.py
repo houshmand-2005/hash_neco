@@ -14,11 +14,11 @@ from django.http import HttpResponse, HttpResponseNotFound
 # 006
 def month_index(request, month):
     if month == "january":
-        challenge_text = ("this is january challenge:)")
+        challenge_text = "this is january challenge:)"
     elif month == "february":
-        challenge_text = ("this is february challenge:)")
+        challenge_text = "this is february challenge:)"
     elif month == "march":
-        challenge_text = ("this is march challenge:)")
+        challenge_text = "this is march challenge:)"
     else:
         return HttpResponseNotFound("<h1>404</h1>")
     return HttpResponse(challenge_text)
