@@ -10,4 +10,4 @@ def index(request):
 
 
 def index_feb(request):
-    return HttpResponse("this is february challenge:)") # 005
+    return HttpResponse("this is february challenge:)")  # 005
