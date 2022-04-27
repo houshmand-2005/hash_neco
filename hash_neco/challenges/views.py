@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.urls import reverse
 # Create your views here.
 
 
@@ -43,4 +44,5 @@ def month_index_bynumber(request, month):
     if month > len(months):
         return HttpResponseNotFound("<h1>404</h1>")
     forward_month = months[month - 1]
-    return HttpResponseRedirect(f"/challenges/{forward_month}")
+    redirect_path = reverse("month_index", args=[forward_month]) # /challenges/january
+    return HttpResponseRedirect(redirect_path)
