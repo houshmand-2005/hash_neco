@@ -2,7 +2,7 @@ from urllib import response
 from django.shortcuts import redirect, render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
-from django.template.loader import render_to_string
+# from django.template.loader import render_to_string
 # Create your views here.
 
 
@@ -16,8 +16,7 @@ month_challenge = {
 def month_index(request, month):
     try:
         challenge_text = month_challenge[month]
-        response_data = render_to_string("challenges/challenge.html")
-        return HttpResponse(response_data)
+        return render(request,"challenges/challenge.html")
     except:
         return HttpResponseNotFound("<h1>404</h1>")
 
