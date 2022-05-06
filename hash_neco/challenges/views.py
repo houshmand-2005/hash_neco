@@ -16,7 +16,9 @@ month_challenge = {
 def month_index(request, month):
     try:
         challenge_text = month_challenge[month]
-        return render(request,"challenges/challenge.html")
+        return render(request, "challenges/challenge.html", {
+            "challenge_text": challenge_text
+        })
     except:
         return HttpResponseNotFound("<h1>404</h1>")
 
