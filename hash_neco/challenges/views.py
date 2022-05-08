@@ -18,7 +18,7 @@ def month_index(request, month):
         challenge_text = month_challenge[month]
         return render(request, "challenges/challenge.html", {
             "challenge_text": challenge_text,
-            "nameofmonth": month.capitalize(),
+            "nameofmonth": month,
         })
     except:
         return HttpResponseNotFound("<h1>404</h1>")
