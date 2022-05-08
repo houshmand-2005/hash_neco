@@ -36,8 +36,11 @@ def month_index_bynumber(request, month):
 
 def chall_index(request):
     months = list(month_challenge.keys())
-    listofmonth = ""
-    for month in months:
-        capitalized_month = month.capitalize()
-        listofmonth += f"<li><a href='{reverse('month_index', args=[month])}'>{capitalized_month}</a></li>"
-    return HttpResponse(f"<ul>{listofmonth}</ul>")
+    return render(request, "challenges/index.html", {
+        "monthnames": months,
+    })
+    # listofmonth = ""
+    # for month in months:
+    #     capitalized_month = month.capitalize()
+    #     listofmonth += f"<li><a href='{reverse('month_index', args=[month])}'>{capitalized_month}</a></li>"
+    # return HttpResponse(f"<ul>{listofmonth}</ul>")
