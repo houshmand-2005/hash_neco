@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}{{nameofmonth|title}} Challenge{% endblock %}
 {% block content %}
+    {% include "challenges/includes/header.html" with active_page="challenge" %}
     <h1>{{nameofmonth|title}} Challenge</h1>
     {% if challenge_text is not None %}
     <h2>{{challenge_text}}</h2>
