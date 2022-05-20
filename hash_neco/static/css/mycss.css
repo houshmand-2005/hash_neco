@@ -1,3 +1,18 @@
-ul {
-  list-style: none;
+li {
+  float: left;
+  list-style-type: none;
+  display: contents;
 }
+li a {
+  color: rgb(12, 100, 109);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: rgb(224, 240, 237);
+}
+li a:hover:not(.active) {
+  background-color: rgb(182, 235, 225);
+  color: rgb(15, 16, 16);
+}
+
+
