@@ -9,12 +9,18 @@ class Another(models.Model):  # Author
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
 
+    def full_name(self):
+        return f'{self.first_name} {self.last_name}'
+    def __str__(self):
+        return self.full_name()
+
 
 class Book(models.Model):
     title = models.CharField(max_length=50)
     rating = models.IntegerField(
         validators=[MinValueValidator(1), MaxValueValidator(5)])
-    another = models.ForeignKey(Another, on_delete=models.CASCADE, null=True)
+    another = models.ForeignKey(
+        Another, on_delete=models.CASCADE, null=True, related_name="books")
     is_best_seller = models.BooleanField(default=False)
     slug = models.SlugField(default="", null=False,
                             db_index=True, blank=True)
