@@ -10,6 +10,11 @@ class Address(models.Model):
     city = models.CharField(max_length=100)
     postal_code = models.CharField(max_length=10)
 
+    def __str__(self):
+        return f"{self.street}, {self.city}, {self.postal_code}"
+    class Meta:
+        verbose_name_plural =("Addresses Entries")
+
 
 class Another(models.Model):  # Author
     first_name = models.CharField(max_length=100)
