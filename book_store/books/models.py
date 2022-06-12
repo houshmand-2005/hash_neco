@@ -1,8 +1,13 @@
+import code
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.urls import reverse
 from django.utils.text import slugify
 # Create your models here.
+
+class Country(models.Model):
+    name = models.CharField(max_length=80)
+    code = models.CharField(max_length=2)
 
 
 class Address(models.Model):
@@ -12,8 +17,9 @@ class Address(models.Model):
 
     def __str__(self):
         return f"{self.street}, {self.city}, {self.postal_code}"
+
     class Meta:
-        verbose_name_plural =("Addresses Entries")
+        verbose_name_plural = ("Addresses Entries")
 
 
 class Another(models.Model):  # Author
@@ -38,7 +44,7 @@ class Book(models.Model):
     is_best_seller = models.BooleanField(default=False)
     slug = models.SlugField(default="", null=False,
                             db_index=True, blank=True)
-
+    publish_country = models.ManyToManyField(Country)
     def get_absolute_url(self):
         return reverse("book_page", args=[self.slug])
 
