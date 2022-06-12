@@ -5,9 +5,13 @@ from django.urls import reverse
 from django.utils.text import slugify
 # Create your models here.
 
+
 class Country(models.Model):
     name = models.CharField(max_length=80)
     code = models.CharField(max_length=2)
+
+    def __str__(self):
+        return self.name
 
 
 class Address(models.Model):
@@ -45,6 +49,7 @@ class Book(models.Model):
     slug = models.SlugField(default="", null=False,
                             db_index=True, blank=True)
     publish_country = models.ManyToManyField(Country)
+
     def get_absolute_url(self):
         return reverse("book_page", args=[self.slug])
 
