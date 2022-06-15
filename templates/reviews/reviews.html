@@ -7,6 +7,10 @@
 <body>
 <form method="post">
     {% csrf_token %}
+    {% if has_error %}
+        <p>This form is invalid - please enter a valid username </p>
+    {% endif %}
+
     <label for="username">Your name:</label>
     <input id="username" name="username" type="text">
     <button type="submit">Send</button>
