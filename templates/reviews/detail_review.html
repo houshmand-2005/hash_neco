@@ -4,4 +4,10 @@
         <h2>{{ review.user_name }}</h2>
         <p>rating : {{ review.rating }}</p>
         <p>{{ review.review_text }}</p>
+        <form action="/reviews/favorite" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="review_id" value="{{ review.id }}">
+            <button>Favorite</button>
+        </form>
+
 {% endblock %}
