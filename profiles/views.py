@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from .form import ProfileForm
 from .models import UserProfile
 from django.views.generic.edit import CreateView
+from django.views.generic import ListView
 # Create your views here.
 
 
@@ -11,6 +12,13 @@ from django.views.generic.edit import CreateView
 #     with open("temp/image.png", "wb+") as dest:
 #         for chunk in file.chunks():
 #             dest.write(chunk)
+
+
+class UserProfiles(ListView):
+    model = UserProfile
+    template_name = "profiles/user_profiles.html"
+    context_object_name = "profiles"
+
 
 class CreateProfileView(CreateView):
     template_name = "profiles/create_profile.html"
