@@ -39,7 +39,7 @@ HOUSHMAND</h4>
 
 ## Download
 
-[Download book](https://github.com/houshmand-2005/hash_neco/raw/9683a412de23b47ca7879a7ac5e64fdc89e8651a/MyDjangoBooklet.pdf)
+[**Download book**](https://github.com/houshmand-2005/hash_neco/raw/9683a412de23b47ca7879a7ac5e64fdc89e8651a/MyDjangoBooklet.pdf)
 
 > GitHub [@houshmand-2005](https://github.com/houshmand-2005)
 
