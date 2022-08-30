@@ -41,6 +41,9 @@ HOUSHMAND</h4>
 
 [**Download book**](https://github.com/houshmand-2005/hash_neco/raw/9683a412de23b47ca7879a7ac5e64fdc89e8651a/MyDjangoBooklet.pdf)
 
+## Markdown version
+this Markdown is generate by [this site](https://products.aspose.app/words/conversion/pdf-to-md) so it has a lot of problem but if you wnat it :
+[**click here to read the markdown version**](https://github.com/houshmand-2005/hash_neco/blob/4e17e27a4a76b5423f5aa2dbfceb53ba65a96b6b/MyDjangoBooklet.md)
 > GitHub [@houshmand-2005](https://github.com/houshmand-2005)
 
 
