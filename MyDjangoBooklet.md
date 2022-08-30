@@ -1,6 +1,8 @@
-﻿**Django** MY DJANGO BOOKLEET ![](Aspose.Words.7c6a0093-d6a4-43ca-9083-c275f428c077.001.jpeg)![](Aspose.Words.7c6a0093-d6a4-43ca-9083-c275f428c077.002.png)
+**Django** MY DJANGO BOOKLEET
+  
+![](Aspose.Words.7c6a0093-d6a4-43ca-9083-c275f428c077.001.jpeg)![](Aspose.Words.7c6a0093-d6a4-43ca-9083-c275f428c077.002.png)
 
-**AMIR MOHMMAD ![](Aspose.Words.7c6a0093-d6a4-43ca-9083-c275f428c077.003.png)HOUSHMAND** 
+**AMIR MOHMMAD HOUSHMAND** 
 
 DON'T REPEAT YOURSELF 
 
@@ -14,7 +16,8 @@ Why Django? What I learn in this course                                         
 
 [**02 COURSE SETUP**](#_page2_x15.00_y725.92)![](Aspose.Words.7c6a0093-d6a4-43ca-9083-c275f428c077.005.png)
 
-How crate a Django project and setup VIRTUALENV                                                                                                                                 4 ![](Aspose.Words.7c6a0093-d6a4-43ca-9083-c275f428c077.006.png)[**03 URLS & VIEWS**](#_page4_x363.00_y18.92)
+[**03 URLS & VIEWS**](#_page4_x363.00_y18.92)
+How crate a Django project and setup VIRTUALENV  4 ![](Aspose.Words.7c6a0093-d6a4-43ca-9083-c275f428c077.006.png)
 
 How crate a simple page in Django with views and URL          5
 
